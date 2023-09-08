@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        #main {
+            width: max-content;
+            margin: 120px auto;
+            font-family: "Segoe UI", sans-serif;
+            padding: 25px 28px;
+            background: #151414;
+            border-radius: 4px;
+            border: 1px solid #302d2d;
+
+        }
+
+        #neon {
+            /* text-align: center;
+            color: #e7e7e7; */
+            
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+        }
+
+        .input-parent {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #a4a4a4;
+        }
+
+        .input-parent input {
+            padding: 10px 8px;
+            width: 100%;
+            font-size: 16px;
+            background: #323131;
+            border: none;
+            color: #c7c7c7;
+            border-radius: 4px;
+            outline: none;
+
+        }
+
+
+        button {
+            padding: 10px 18px;
+            font-size: 15px;
+            background: #1a3969;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            color: #f4f4f4;
+
+        }
+
+        body {
+            background: #1c1b1b;
+        }
+
+        #result {
+
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#!" id="main">
+       
+        <label id="neon">Check the Factor Number</label>
+        <div class="input-parent">
+            <label for="username">Enter the number</label>
+            <input type="text" id="username" placeholder="Enter num">
+        </div>
+
+
+        <button type="submit" onclick="factor()">RESULT</button>
+        <br>
+        <br>
+        <label id="result"> </label>
+    </form>
+
+    <script>
+
+        function factor() {
+
+            document.getElementById("result").textContent = " ";
+            
+            var i = document.getElementById("username").value
+            var k = parseInt(i);
+            
+
+            for (k = 0; k <= i; k++) {
+
+                if (i % k == 0) {
+
+                    document.getElementById("result").textContent = document.getElementById("result").textContent + "  " + k;
+                }
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
